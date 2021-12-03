@@ -35,7 +35,7 @@ function calcularTotal(){
     if (monto === ""){
         document.getElementById('total').value = "";
     }else{
-        document.getElementById('total').value = comision + parseInt(monto);
+        document.getElementById('total').value = comision + parseFloat(monto);
     }
 
 }
@@ -43,30 +43,57 @@ function calcularTotal(){
 
 //----------------------------------------------------------------
 function impresora(){
-    //document.getElementById('contenido').style.marginRight = '0px';
-    //document.getElementById('contenido').style.marginLeft = '0px';
-    //document.getElementById('titulo').style.textAlign = 'center';
+    const h2 = new Date();
+
+    let hour = h2.getHours();
+
+    if (hour > 9) {
+        hour -= 12
+        hour = ((hour < 10) ? "0" : "") + hour;
+    }
+
+    const minutes = ((h2.getMinutes() < 10) ? "0" : "") + h2.getMinutes();
+    const seconds = ((h2.getSeconds() < 10) ? "0" : "") + h2.getSeconds();
+
+    let hora_pag = document.getElementById('hora');
+    hora_pag.innerHTML = "<b>HORA: </b>" + hour + ":" + minutes + ":" + seconds;
+
+    const day = ((h2.getDate() < 10) ? "0" : "") + h2.getDate();
+    let month = ((h2.getMonth() < 10) ? "0" : "") + h2.getMonth();
+
+    if (month >= 0){
+        month = parseInt(month) + 1
+    }
+    const year = ((h2.getFullYear() < 10) ? "0" : "") + h2.getFullYear();
+    let fecha_pag = document.getElementById('fecha');
+    fecha_pag.innerHTML = "<b>FECHA: </b>" + day + "/" + month + "/" + year;
+
+    //------------------------
     document.body.style.textAlign = 'left';
 
 
     const titulo = document.getElementById('titulo').innerHTML;
 
-    const fecha = document.getElementById('fecha').innerHTML;
-    const hora = document.getElementById('hora').innerHTML
+    const fecha = "<b>FECHA: </b>" + day + "/" + month + "/" + year;
+    const hora = "<b>HORA: </b>" + hour + ":" + minutes + ":" + seconds;
 
     const servicio = "<b>SERVICIO: </b>" + document.getElementById('servicio').value;
-    const institucion = "<b>INSTITUCIÓN: </b>" + document.getElementById('institucion').value
-    const documento = "<b>NÚMERO DE DOCUMENTO: </b>" + document.getElementById('documento').value;
-    const cliente = "<b>CLIENTE: </b>" + document.getElementById('cliente').value;
-    const operacion = "<b>NÚMERO DE OPERACIÓN: </b>"  + document.getElementById('op').value;
-    const monto = "<b>MONTO: </b>" + document.getElementById('monto').value;
-    const comision = "<b>COMISIÓN: </b>" + document.getElementById('comision').innerHTML
-    const total = "<b>TOTAL A PAGAR: </b>" + document.getElementById('total').value;
 
-    let salida = "⠀⠀⠀⠀⠀⠀⠀⠀" + titulo + '<br>' + '<br>' +
+    const agente = "<b>AGENTE: </b>" + document.getElementById('agente').value;
+
+    const institucion = "<b>INSTITUCIÓN: </b>" + document.getElementById('institucion').value
+    const documento = "<b>NRO DE DOC: </b>" + document.getElementById('documento').value;
+    const cliente = "<b>CLIENTE: </b>" + document.getElementById('cliente').value;
+    const operacion = "<b>NRO DE OP: </b>"  + document.getElementById('op').value;
+    const monto = "<b>MONTO: </b> S/" + document.getElementById('monto').value;
+    const comision = "<b>COMISIÓN: </b>" + document.getElementById('comision').innerHTML
+    const total = "<b>TOTAL A PAGAR: </b> S/" + document.getElementById('total').value;
+
+    let salida = titulo + '<br>' + '<br>' +
         fecha + '<br>' +
         hora + '<br>' + '<br>' +
         servicio + '<br>' +
+        agente + '<br>' +
         institucion + '<br>' +
         documento + '<br>' +
         cliente + '<br>' +
@@ -79,6 +106,8 @@ function impresora(){
     document.body.innerHTML = salida;
     window.print()
     document.body.innerHTML = restorecontent;
+
+    
 
     //document.getElementById('imprimir').style.margin = 'auto';
 

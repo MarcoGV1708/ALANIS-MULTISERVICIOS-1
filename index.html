@@ -19,16 +19,31 @@
                     <label id = "hora" class = texto>Hora:</label>
                 </div>
 
-                <label for="servicio" class = "texto">Servicio:</label>
-                <select roleplay="30" id = "servicio" class="caja">
-                    <option></option>
-                    <option>Pagos</option>
-                    <option>Financiero</option>
-                    <option>Telefonía</option>
-                    <option>Gas</option>
-                    <option>Agua</option>
-                    <option>Luz</option>
-                </select>
+                <div>
+                    <label for="servicio" class = "texto">Servicio:</label>
+                    <input type="text" id="servicio" list="opciones" class = "caja">
+                    <datalist id = "opciones">
+                        <option></option>
+                        <option>Pagos</option>
+                        <option>Financiero</option>
+                        <option>Telefonía</option>
+                        <option>Gas</option>
+                        <option>Agua</option>
+                        <option>Luz</option>
+                    </datalist>
+                </div>
+
+                <div>
+                    <label for="agente" class = "texto">Agente:</label>
+                    <select roleplay="30" id = "agente" class="caja">
+                        <option></option>
+                        <option>Cell Power - 570408</option>
+                        <option>BIM - 991470639</option>
+                        <option>Red Digital - w0081200102</option>
+                        <option>Western Union - 570408</option>
+                        <option>Full Carga - 112864</option>
+                    </select>
+                </div>
 
                 <div>
                     <label for="institucion" class = "texto">Institución:</label>

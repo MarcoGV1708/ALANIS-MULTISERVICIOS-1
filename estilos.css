@@ -12,7 +12,7 @@ body{
     margin-right: auto;
     margin-left: auto;
     background-color: #ffffff;
-    width: 400px;
+    width: 650px;
     padding: 10px;
     margin-top: 50px;
 
@@ -20,7 +20,7 @@ body{
 
 .caja{
     height: 30px;
-    width: 170px;
+    width: 300px;
     margin-bottom: 5px;
     margin-top: 5px;
     font-size: 20px;
