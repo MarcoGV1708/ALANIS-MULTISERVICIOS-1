@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiservicios Alanis</title>
+    <link rel = "stylesheet" href="estilos.css">
+
+</head>
+<body>
+    <div id="contenido">
+        <h2>PAGO</h2>
+            <div id = "imprimir">
+                <H1 id="titulo">MULTISERVICIOS ALANIS 1</H1>
+                <div>
+                    <label id = "fecha" class = texto>Fecha: </label>
+                </div>
+
+                <div>
+                    <label id = "hora" class = texto>Hora:</label>
+                </div>
+
+                <label for="servicio" class = "texto">Servicio:</label>
+                <select roleplay="30" id = "servicio" class="caja">
+                    <option></option>
+                    <option>Pagos</option>
+                    <option>Financiero</option>
+                    <option>Telefonía</option>
+                    <option>Gas</option>
+                    <option>Agua</option>
+                    <option>Luz</option>
+                </select>
+
+                <div>
+                    <label for="institucion" class = "texto">Institución:</label>
+                    <input type="text" id = "institucion" class="caja">
+                </div>
+
+                <div>
+                    <label for="documento" class = "texto">Nro de Doc:</label>
+                    <input type="text" id = "documento" class="caja">
+                </div>
+
+                <div>
+                    <label for="cliente" class = "texto">Cliente:</label>
+                    <input type="text" id = "cliente" class="caja">
+                </div>
+
+                <div>
+                    <label for="op" class = "texto">Nro de Op     :</label>
+                    <input type="text" id = "op" class="caja">
+                </div>
+
+                <div>
+                    <label for="monto" class = "texto">Monto:</label>
+                    <input type="text" id = "monto" class="caja" onkeyup="calcularTotal()">
+                </div>
+
+                <div>
+                    <label class = "texto">Comisión:</label>
+                    <label id = "comision" class="caja">S/1.00</label>
+                </div>
+
+                <div>
+                    <label for = "total" class = "texto">Total a Pagar:</label>
+                    <input type="text" id = "total" class="caja">
+                </div>
+            </div>
+
+        <div>
+            <button onclick="impresora()">IMPRIMIR</button>
+        </div>
+    </div>
+    <script type = "text/javascript" src = "app.js"></script>
+</body>
+</html>
