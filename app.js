@@ -4,8 +4,9 @@ let hour = h.getHours();
 
 if (hour > 12) {
     hour -= 12
-    hour = ((hour < 10) ? "0" : "") + hour;
 }
+
+hour = ((hour < 10) ? "0" : "") + hour;
 
 const minutes = ((h.getMinutes() < 10) ? "0" : "") + h.getMinutes();
 const seconds = ((h.getSeconds() < 10) ? "0" : "") + h.getSeconds();
@@ -48,9 +49,10 @@ function impresora(){
     let hour = h2.getHours();
 
     if (hour > 12) {
-        hour -= 12
-        hour = ((hour < 10) ? "0" : "") + hour;
+    hour -= 12
     }
+
+    hour = ((hour < 10) ? "0" : "") + hour;
 
     const minutes = ((h2.getMinutes() < 10) ? "0" : "") + h2.getMinutes();
     const seconds = ((h2.getSeconds() < 10) ? "0" : "") + h2.getSeconds();
