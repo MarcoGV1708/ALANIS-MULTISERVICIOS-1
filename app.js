@@ -2,7 +2,7 @@ const h = new Date();
 
 let hour = h.getHours();
 
-if (hour > 9) {
+if (hour > 11) {
     hour -= 12
     hour = ((hour < 10) ? "0" : "") + hour;
 }
@@ -47,7 +47,7 @@ function impresora(){
 
     let hour = h2.getHours();
 
-    if (hour > 9) {
+    if (hour > 11) {
         hour -= 12
         hour = ((hour < 10) ? "0" : "") + hour;
     }
