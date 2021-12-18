@@ -36,7 +36,7 @@ function calcularTotal(){
     if (monto === ""){
         document.getElementById('total').value = "";
     }else{
-        document.getElementById('total').value = comision + parseFloat(monto);
+        document.getElementById('total').value = round(comision + parseFloat(monto), 2);
     }
 
 }
