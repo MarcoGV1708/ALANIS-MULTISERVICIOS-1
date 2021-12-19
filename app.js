@@ -33,12 +33,12 @@ function calcularTotal(){
     let monto = document.getElementById("monto").value;
     let comision = 1;
     
-    let redondeado = monto + parseFloat(monto)
+    let redondeado = comision + parseFloat(monto)
 
     if (monto === ""){
         document.getElementById('total').value = "";
     }else{
-        document.getElementById('total').value = redondeado;
+        document.getElementById('total').value = redondeado.toFixed(2);
     }
 
 }
