@@ -38,7 +38,7 @@ function calcularTotal(){
     if (monto === ""){
         document.getElementById('total').value = "";
     }else{
-        document.getElementById('total').value = redondeado.toFixed(2);
+        document.getElementById('total').value = redondeado;
     }
 
 }
