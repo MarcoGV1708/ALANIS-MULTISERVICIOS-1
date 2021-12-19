@@ -32,11 +32,13 @@ fecha.innerHTML = "<b>FECHA: </b>" + day + "/" + month + "/" + year;
 function calcularTotal(){
     let monto = document.getElementById("monto").value;
     let comision = 1;
+    
+    let redondeado = monto + parseFloat(monto)
 
     if (monto === ""){
         document.getElementById('total').value = "";
     }else{
-        document.getElementById('total').value = Math.round10(comision + parseFloat(monto), -2);
+        document.getElementById('total').value = redondeado.toFixed(2);
     }
 
 }
