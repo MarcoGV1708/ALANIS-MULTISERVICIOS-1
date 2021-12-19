@@ -72,8 +72,11 @@
                 </div>
 
                 <div>
-                    <label class = "texto">Comisión:</label>
-                    <label id = "comision" class="caja">S/1.00</label>
+					<label for="comision" class = "texto">Comisión:</label>
+                    <select roleplay="30" onChange="calcularTotal()" id = "comision" class="caja">
+                        <option>S/1.00</option>
+                        <option>S/0.00</option>
+                    </select>
                 </div>
 
                 <div>
