@@ -31,9 +31,11 @@ fecha.innerHTML = "<b>FECHA: </b>" + day + "/" + month + "/" + year;
 
 function calcularTotal(){
     let monto = document.getElementById("monto").value;
-    let comision = 1;
+    let comision = document.getElementById("comision").value;
     
-    let redondeado = comision + parseFloat(monto)
+    let n_comision = parseInt(comision.substr(2,2));
+    
+    let redondeado = n_comision + parseFloat(monto)
 
     if (monto === ""){
         document.getElementById('total').value = "";
@@ -90,7 +92,7 @@ function impresora(){
     const cliente = "<b>CLIENTE: </b>" + document.getElementById('cliente').value;
     const operacion = "<b>NRO DE OP: </b>"  + document.getElementById('op').value;
     const monto = "<b>MONTO: </b> S/" + document.getElementById('monto').value;
-    const comision = "<b>COMISIÓN: </b>" + document.getElementById('comision').innerHTML
+    const comision = "<b>COMISIÓN: </b>" + document.getElementById("comision").value;
     const total = "<b>TOTAL A PAGAR: </b> S/" + document.getElementById('total').value;
 
     let salida = titulo + '<br>' + '<br>' +
