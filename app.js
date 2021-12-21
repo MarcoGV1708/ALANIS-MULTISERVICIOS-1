@@ -89,6 +89,7 @@ function impresora(){
 
     const institucion = "<b>INSTITUCIÓN: </b>" + document.getElementById('institucion').value
     const documento = "<b>NRO DE DOC: </b>" + document.getElementById('documento').value;
+    const recibo = "<b>NRO DE RECIBO: </b>" + document.getElementById('recibo').value;
     const cliente = "<b>CLIENTE: </b>" + document.getElementById('cliente').value;
     const operacion = "<b>NRO DE OP: </b>"  + document.getElementById('op').value;
     const monto = "<b>MONTO: </b> S/" + document.getElementById('monto').value;
@@ -101,6 +102,7 @@ function impresora(){
         servicio + '<br>' +
         agente + '<br>' +
         institucion + '<br>' +
+        recibo + '<br>' +
         documento + '<br>' +
         cliente + '<br>' +
         operacion + '<br>' +
