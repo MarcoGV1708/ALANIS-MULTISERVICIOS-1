@@ -18,7 +18,7 @@ const day = ((h.getDate() < 10) ? "0" : "") + h.getDate();
 let month = ((h.getMonth() < 10) ? "0" : "") + h.getMonth();
 
 if (month >= 0){
-    month = (month < 10) ? "0" : "") + parseInt(month) + 1;
+    month = parseInt(month) + 1;
 }
 const year = ((h.getFullYear() < 10) ? "0" : "") + h.getFullYear();
 
